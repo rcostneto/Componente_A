@@ -1,7 +1,7 @@
-# Minha API Principal_a
+# Minha API COMPONENTE_A(Principal)
 
 Este projeto foi pensado em atender a demanda de uma *Oficina_de_Peças* **VS Veiculos**, onde se realiza concerto e manutenção de veículos,
-Principal_a(API principal) recebe dados de veículo do Componente_B(API externa), peças do Componente_C(API externa) e usuarios do TopCar_d(API externa).
+Principal_a(API principal) recebe dados de veículo do Componente_B(API externa), peças do Componente_C(API externa) e usuarios do Componente_d(API externa(TopCar_d)).
 
 ```
     A oficina permite atender tanto CPF quanto CNPJ, o CPF se refere aos veículos que surgem de maneira aleatória, sendo possível seu cadastro,
@@ -77,8 +77,10 @@ $ docker build -t rest-a .
 Para executar o container basta executar, **como administrador**, expecificando o nome e a rede.
 
 ```
-$ docker run -d -p 5000:5000 --name peca-veiculo --network oficina -v /c/Users/RCNeto/Desktop/mvp_desenvolvimento_backend_avancado/rest_api_principal_a/database:/app/database rest-a
->>>obs: o comando anterior se refere ao mapeamento com o docker da pasta database que esta na maquina local(area de trabalho), para que a imagem que esta no docker com o banco db.sqlite3 consiga atualizar o mesmo banco na maquina local.
+$ docker run -d -p 5000:5000 --name peca-veiculo --network oficina -v /C/Users/RCNeto/Desktop/Componente_A-main/database:/app/database rest-a
+
+>>>obs: O caminho da linha 80, foi configurado para o Desktop da minha maquina, nesse caso sera necessario alterar o esse caminho(/C/Users/RCNeto/Desktop/Componente_A-main/databas) bastando clicar com o botao direito do mouse na pasta database do projeto e copiar o
+caminho ou copy path e substituir na respectiva linha.
 ```
 ---
 ### Alguns comandos úteis do Docker
